@@ -1,3 +1,3 @@
-import redakt from './redact';
+import redakt from './redakt';
 
 export default redakt;
