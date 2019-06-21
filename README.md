@@ -1,23 +1,23 @@
-# Redact Object
+# Redakt Object
 
 ## Installation
 ```bash
 # With Yarn
-yarn add @vinlock/redact-object
+yarn add redakt
 
 # With NPM 
-npm install @vinlock/redact
+npm install redakt
 ```
 
 ## Usage
 ```js
-import redact from '@vinlock/redact';
+import redakt from 'redakt';
 
 const objWithSecrets = {
   password: 'THISISMYPASSWORD',
 };
 
-const redactedObject = redact(objWithSecrets, {
+const redactedObject = redakt(objWithSecrets, {
   enabled: true,
   replace: '[REDACTED]',
   keys: [

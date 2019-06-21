@@ -1,4 +1,4 @@
-import redact from './redact';
+import redakt from './redakt';
 
 describe('RedactObject', function() {
   it('should redact password keys', function() {
@@ -28,7 +28,7 @@ describe('RedactObject', function() {
       },
     };
 
-    expect(redact(log, { keys: [ 'password' ] })).toEqual({
+    expect(redakt(log, { keys: [ 'password' ] })).toEqual({
       password: '[REDACTED]',
       checker: [
         {

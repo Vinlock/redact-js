@@ -1,3 +1,3 @@
-import redact from './redact';
+import redakt from './redact';
 
-export default redact;
+export default redakt;

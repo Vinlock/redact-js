@@ -9,7 +9,7 @@ import Validation from './lib/Validation';
  * @param {Array} options.keys Object Keys to redact.
  * @returns {*}
  */
-const redact = (element, options = {}) => {
+const redakt = (element, options = {}) => {
   options = Object.assign({
     enabled: true,
     replace: '[REDACTED]',
@@ -25,7 +25,7 @@ const redact = (element, options = {}) => {
         json = null;
       }
     }
-    if (json) return JSON.stringify(redact(element, options));
+    if (json) return JSON.stringify(redakt(element, options));
 
     // Object Check
     if (Validation.isObject(element)) {
@@ -34,7 +34,7 @@ const redact = (element, options = {}) => {
         if (options.keys.indexOf(key) !== -1) {
           element[ key ] = options.replace;
         } else {
-          element[ key ] = redact(element[ key ], options);
+          element[ key ] = redakt(element[ key ], options);
         }
       });
       return element;
@@ -42,11 +42,11 @@ const redact = (element, options = {}) => {
 
     // Array Check
     if (Validation.isArray(element)) {
-      element = element.map(arrayElement => redact(arrayElement, options));
+      element = element.map(arrayElement => redakt(arrayElement, options));
     }
   }
 
   return element;
 };
 
-export default redact;
+export default redakt;
