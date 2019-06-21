@@ -38,6 +38,7 @@ Redact's first parameter is the object or JSON string that you would like to rec
 
 ### Options `Object`
 Redact's second parameter is the options object.
+
 | Parameter  | Type | Default | Description |
 |---|---|---|---|
 | `enabled`  | `Boolean` | `true` | Enable or disable redaction. |
